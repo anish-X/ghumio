@@ -271,25 +271,43 @@ export const CheckoutPage: React.FC<CheckoutPageProps> = ({
               <div className="space-y-3">
                 
                 {/* Fonepay QR */}
-                <label className={`flex items-start gap-3 p-4 rounded-2xl border-2 cursor-pointer transition-all ${
-                  paymentMethod === 'fonepay' ? 'border-[#F45B18] bg-[#FFF2EB]/20' : 'border-[#E8EAF0] hover:border-[#D7DBE5]'
+                <label className={`flex flex-col gap-3 p-4 rounded-2xl border-2 cursor-pointer transition-all ${
+                  paymentMethod === 'fonepay' ? 'border-[#F45B18] bg-[#FFF2EB]/20 shadow-sm' : 'border-[#E8EAF0] hover:border-[#D7DBE5]'
                 }`}>
-                  <input
-                    type="radio"
-                    name="payMethod"
-                    checked={paymentMethod === 'fonepay'}
-                    onChange={() => setPaymentMethod('fonepay')}
-                    className="mt-1 accent-[#F45B18]"
-                  />
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between">
-                      <span className="font-bold text-sm text-[#101D45]">Fonepay QR (Recommended in Nepal)</span>
-                      <span className="text-[11px] font-bold text-[#08C5C9] bg-[#E6FAFB] px-2 py-0.5 rounded-md">Instant Lock</span>
+                  <div className="flex items-start gap-3">
+                    <input
+                      type="radio"
+                      name="payMethod"
+                      checked={paymentMethod === 'fonepay'}
+                      onChange={() => setPaymentMethod('fonepay')}
+                      className="mt-1 accent-[#F45B18]"
+                    />
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between">
+                        <span className="font-bold text-sm text-[#101D45]">Fonepay QR (Recommended in Nepal)</span>
+                        <span className="text-[11px] font-bold text-[#08C5C9] bg-[#E6FAFB] px-2 py-0.5 rounded-md">Instant Lock</span>
+                      </div>
+                      <p className="text-xs text-[#57647E] mt-0.5">
+                        Scan QR directly from Global IME, Nabil, NIC Asia, Everest, or any Nepal bank mobile banking app.
+                      </p>
                     </div>
-                    <p className="text-xs text-[#57647E] mt-0.5">
-                      Scan QR from any Nepal banking app (Global IME, Nabil, NIC Asia, Everest, Siddhartha, etc.).
-                    </p>
                   </div>
+
+                  {paymentMethod === 'fonepay' && (
+                    <div className="mt-2 p-4 bg-white rounded-2xl border border-[#F45B18]/30 flex flex-col sm:flex-row items-center gap-4 animate-in fade-in-50">
+                      <div className="w-24 h-24 bg-[#101D45] text-white rounded-xl flex flex-col items-center justify-center p-1.5 shadow-sm">
+                        <QrCode className="w-16 h-16 text-[#08C5C9]" />
+                        <span className="text-[8px] font-bold tracking-wider text-slate-300 uppercase">Fonepay Test</span>
+                      </div>
+                      <div className="text-xs text-[#57647E] text-center sm:text-left space-y-1">
+                        <div className="font-bold text-[#101D45]">Ghumio Merchant Terminal #NP-88219</div>
+                        <div>Amount: <strong className="text-[#F45B18]">{formatNPR(totalAmount)}</strong></div>
+                        <div className="text-[11px] text-[#15803D] font-semibold">
+                          ✓ Dynamic Nepal Pay QR generated. Click "Confirm & Pay" below to simulate scan authorization.
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </label>
 
                 {/* eSewa */}

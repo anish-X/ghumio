@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+    <defs>
+      <linearGradient id="annapurnaSky" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#0E1E40"/>
+        <stop offset="60%" stop-color="#1E3A70"/>
+        <stop offset="100%" stop-color="#FFB91F"/>
+      </linearGradient>
+    </defs>
+    <rect width="800" height="500" fill="url(#annapurnaSky)"/>
+    <!-- Massive Glacial Peaks -->
+    <polygon points="380,70 540,320 220,320" fill="#FFFFFF"/>
+    <polygon points="380,70 410,320 380,320" fill="#D7DBE5"/>
+    <polygon points="180,130 320,340 40,340" fill="#F1F4F9"/>
+    <polygon points="620,110 780,340 460,340" fill="#F8FAFC"/>
+    <!-- Shadowed mountain ridges -->
+    <polygon points="280,240 500,420 60,420" fill="#2E4057"/>
+    <polygon points="560,220 790,440 330,440" fill="#1F2D3D"/>
+    <!-- Valley Floor & Rhododendron trail -->
+    <path d="M0,400 Q300,360 600,410 T800,390 L800,500 L0,500 Z" fill="#141E28"/>
+    <!-- Colorful Himalayan Buddhist Prayer Flags -->
+    <path d="M50,420 Q200,400 400,430 T750,410" stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.6"/>
+    <polygon points="90,415 110,415 100,430" fill="#1769F5"/>
+    <polygon points="130,413 150,413 140,428" fill="#FFFFFF"/>
+    <polygon points="170,411 190,411 180,426" fill="#DC2626"/>
+    <polygon points="210,411 230,411 220,426" fill="#15803D"/>
+    <polygon points="250,413 270,413 260,428" fill="#FFB91F"/>
+    <polygon points="290,416 310,416 300,431" fill="#1769F5"/>
+    <polygon points="330,419 350,419 340,434" fill="#FFFFFF"/>
+    <polygon points="370,422 390,422 380,437" fill="#DC2626"/>
+  </svg>

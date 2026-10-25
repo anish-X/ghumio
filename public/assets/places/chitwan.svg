@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+    <defs>
+      <linearGradient id="chitwanSunset" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#F45B18"/>
+        <stop offset="50%" stop-color="#FFB91F"/>
+        <stop offset="100%" stop-color="#08C5C9"/>
+      </linearGradient>
+    </defs>
+    <rect width="800" height="500" fill="url(#chitwanSunset)"/>
+    <!-- Sun setting -->
+    <circle cx="400" cy="220" r="70" fill="#FFFDF0" opacity="0.9"/>
+    <!-- Sal trees & Elephant grass silhouettes -->
+    <path d="M0,280 Q200,260 400,285 T800,270 L800,350 L0,350 Z" fill="#1C3829"/>
+    <path d="M40,200 L60,290 L20,290 Z" fill="#13271D"/>
+    <path d="M100,180 L130,290 L70,290 Z" fill="#13271D"/>
+    <path d="M680,190 L710,290 L650,290 Z" fill="#13271D"/>
+    <path d="M740,170 L770,290 L710,290 Z" fill="#13271D"/>
+    <!-- Rapti River -->
+    <rect y="330" width="800" height="170" fill="#0C4A60"/>
+    <!-- Greater One-Horned Rhino Silhouette crossing water -->
+    <ellipse cx="320" cy="380" rx="45" ry="25" fill="#051D24"/>
+    <ellipse cx="270" cy="375" rx="20" ry="16" fill="#051D24"/>
+    <polygon points="250,365 245,350 258,365" fill="#051D24"/>
+    <rect x="290" y="395" width="12" height="25" fill="#051D24"/>
+    <rect x="340" y="395" width="12" height="25" fill="#051D24"/>
+    <!-- Traditional wooden dugout canoe -->
+    <path d="M520,385 L640,385 L655,400 L505,400 Z" fill="#101D45"/>
+    <line x1="560" y1="365" x2="570" y2="405" stroke="#FFFFFF" stroke-width="2"/>
+    <circle cx="560" cy="360" r="5" fill="#FFB91F"/>
+  </svg>

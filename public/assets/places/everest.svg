@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+    <defs>
+      <linearGradient id="everestSky" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#050B1A"/>
+        <stop offset="70%" stop-color="#142B63"/>
+        <stop offset="100%" stop-color="#E2E8F0"/>
+      </linearGradient>
+    </defs>
+    <rect width="800" height="500" fill="url(#everestSky)"/>
+    <!-- Mt Everest (Sagarmatha 8,848m) with wind plume -->
+    <path d="M420,80 Q520,75 580,95 Q510,105 450,110 Z" fill="#FFFFFF" opacity="0.6"/>
+    <polygon points="420,80 620,380 220,380" fill="#FFFFFF"/>
+    <polygon points="420,80 470,380 420,380" fill="#94A3B8"/>
+    <!-- Nuptse & Lhotse ridges -->
+    <polygon points="630,130 800,400 460,400" fill="#E2E8F0"/>
+    <polygon points="210,160 380,420 40,420" fill="#CBD5E1"/>
+    <!-- Khumbu glacier valley -->
+    <path d="M0,370 L800,370 L800,500 L0,500 Z" fill="#0F172A"/>
+    <polygon points="120,410 180,470 60,470" fill="#334155"/>
+    <polygon points="650,390 730,460 570,460" fill="#334155"/>
+    <!-- Teahouse lodges at Gorakshep / EBC -->
+    <rect x="360" y="440" width="40" height="25" fill="#1769F5" rx="3"/>
+    <polygon points="355,440 380,425 405,440" fill="#DC2626"/>
+    <rect x="420" y="445" width="45" height="25" fill="#15803D" rx="3"/>
+    <polygon points="415,445 442,430 470,445" fill="#FFB91F"/>
+  </svg>

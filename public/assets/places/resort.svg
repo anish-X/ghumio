@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+    <defs>
+      <linearGradient id="resortSky" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#0F172A"/>
+        <stop offset="60%" stop-color="#1E3A8A"/>
+        <stop offset="100%" stop-color="#F45B18"/>
+      </linearGradient>
+    </defs>
+    <rect width="800" height="500" fill="url(#resortSky)"/>
+    <!-- Annapurna Mountain Range silhouette glowing -->
+    <polygon points="400,120 520,280 280,280" fill="#FFFFFF" opacity="0.9"/>
+    <!-- Luxury Eco Lodge Villa with wooden deck and terrace -->
+    <polygon points="200,240 400,180 600,240" fill="#451A03"/>
+    <rect x="220" y="240" width="360" height="120" fill="#78350F"/>
+    <!-- Glass floor-to-ceiling windows showing warm interior light -->
+    <rect x="250" y="260" width="80" height="85" fill="#FEF08A" opacity="0.9"/>
+    <rect x="360" y="260" width="80" height="85" fill="#FEF08A" opacity="0.9"/>
+    <rect x="470" y="260" width="80" height="85" fill="#FEF08A" opacity="0.9"/>
+    <!-- Infinity Pool Reflection -->
+    <rect y="360" width="800" height="140" fill="#0284C7"/>
+    <path d="M0,360 L800,360" stroke="#38BDF8" stroke-width="4"/>
+    <ellipse cx="400" cy="420" rx="140" ry="6" fill="#38BDF8" opacity="0.5"/>
+  </svg>

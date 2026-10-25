@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+    <defs>
+      <linearGradient id="ktmSky" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#1A2A5E"/>
+        <stop offset="60%" stop-color="#F45B18"/>
+        <stop offset="100%" stop-color="#FFB91F"/>
+      </linearGradient>
+    </defs>
+    <rect width="800" height="500" fill="url(#ktmSky)"/>
+    <!-- Kathmandu Valley Foothills -->
+    <path d="M0,280 Q250,220 500,260 T800,240 L800,340 L0,340 Z" fill="#2A1B14" opacity="0.6"/>
+    <!-- Multi-tiered Newari Pagoda Temple (Nyatapola / Pashupati style) -->
+    <!-- Tier 1 Top Spire -->
+    <polygon points="400,60 410,110 390,110" fill="#FFB91F"/>
+    <path d="M370,120 L430,120 L450,140 L350,140 Z" fill="#8B2500"/>
+    <rect x="385" y="140" width="30" height="25" fill="#B2380E"/>
+    <!-- Tier 2 -->
+    <path d="M340,165 L460,165 L490,195 L310,195 Z" fill="#8B2500"/>
+    <rect x="365" y="195" width="70" height="35" fill="#B2380E"/>
+    <!-- Tier 3 -->
+    <path d="M300,230 L500,230 L540,270 L260,270 Z" fill="#8B2500"/>
+    <rect x="340" y="270" width="120" height="50" fill="#B2380E"/>
+    <!-- Tier 4 Base & Brick Platform -->
+    <path d="M240,320 L560,320 L610,375 L190,375 Z" fill="#701C00"/>
+    <rect x="180" y="375" width="440" height="125" fill="#992D0C"/>
+    <!-- Temple Steps & Carved Guardian Lions -->
+    <rect x="220" y="420" width="360" height="80" fill="#6B1D08"/>
+    <rect x="260" y="455" width="280" height="45" fill="#521505"/>
+    <circle cx="280" cy="445" r="10" fill="#FFB91F"/>
+    <circle cx="520" cy="445" r="10" fill="#FFB91F"/>
+    <!-- Pigeons in flight -->
+    <path d="M180,180 Q190,170 200,180 Q210,170 220,180" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+    <path d="M580,150 Q590,140 600,150 Q610,140 620,150" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+    <path d="M640,180 Q650,170 660,180 Q670,170 680,180" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  </svg>

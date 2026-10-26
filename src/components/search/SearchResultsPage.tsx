@@ -164,28 +164,28 @@ export const SearchResultsPage: React.FC<SearchResultsPageProps> = ({
     filteredActivities.length;
 
   return (
-    <div className="min-h-screen bg-[#F7F5EF] text-[#252923] py-8 sm:py-12">
+    <div className="min-h-screen bg-[#FFFCF7] py-8 sm:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Breadcrumb & Category Bar */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-[#E8DFD0]">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-[#E8EAF0]">
           <div>
-            <div className="flex items-center gap-2 text-xs font-mono text-[#7D8876] mb-1">
-              <button onClick={() => onNavigate({ type: 'home' })} className="hover:text-[#173D32]">Journal</button>
+            <div className="flex items-center gap-2 text-xs font-semibold text-[#8F9BB3] mb-1">
+              <button onClick={() => onNavigate({ type: 'home' })} className="hover:text-[#101D45]">Home</button>
               <span>/</span>
-              <span className="capitalize text-[#173D32]">{activeCategory}</span>
+              <span className="capitalize text-[#101D45]">{activeCategory}</span>
               {selectedDestination && (
                 <>
                   <span>/</span>
-                  <span className="text-[#C77B5A]">{selectedDestination}</span>
+                  <span className="text-[#F45B18]">{selectedDestination}</span>
                 </>
               )}
             </div>
 
-            <h1 className="text-2xl sm:text-4xl font-serif font-light text-[#173D32] tracking-tight flex items-center gap-3">
-              <span>Sanctuary</span>
-              <span className="text-[#C77B5A] italic capitalize">{activeCategory}</span>
-              <span className="text-xs font-mono font-normal text-[#7D8876] bg-white px-3 py-1 rounded-full border border-[#E8DFD0]">
+            <h1 className="text-2xl sm:text-3xl font-black text-[#101D45] tracking-tight flex items-center gap-2.5">
+              <span>Explore Nepal</span>
+              <span className="text-[#F45B18] capitalize">{activeCategory}</span>
+              <span className="text-sm font-semibold text-[#8F9BB3] bg-white px-2.5 py-1 rounded-full border border-[#E8EAF0]">
                 {currentCount} results
               </span>
             </h1>
@@ -194,10 +194,10 @@ export const SearchResultsPage: React.FC<SearchResultsPageProps> = ({
           {/* Category Switcher Pills */}
           <div className="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0">
             {[
-              { id: 'tours', label: 'Journeys', icon: <Compass className="w-3.5 h-3.5" /> },
-              { id: 'hotels', label: 'Stays', icon: <Hotel className="w-3.5 h-3.5" /> },
-              { id: 'bus', label: 'Transits', icon: <Bus className="w-3.5 h-3.5" /> },
-              { id: 'activities', label: 'Experiences', icon: <Sparkles className="w-3.5 h-3.5" /> },
+              { id: 'tours', label: 'Tours', icon: <Compass className="w-4 h-4" /> },
+              { id: 'hotels', label: 'Hotels', icon: <Hotel className="w-4 h-4" /> },
+              { id: 'bus', label: 'Buses', icon: <Bus className="w-4 h-4" /> },
+              { id: 'activities', label: 'Activities', icon: <Sparkles className="w-4 h-4" /> },
             ].map((cat) => {
               const active = activeCategory === cat.id;
               return (
@@ -208,10 +208,10 @@ export const SearchResultsPage: React.FC<SearchResultsPageProps> = ({
                     setActiveCategory(cat.id as ServiceCategory);
                     onNavigate({ type: 'search', category: cat.id as ServiceCategory });
                   }}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium tracking-wide transition-all whitespace-nowrap ${
+                  className={`flex items-center gap-2 px-4 py-2 rounded-2xl text-xs font-bold transition-all whitespace-nowrap ${
                     active
-                      ? 'bg-[#173D32] text-[#F7F5EF] shadow-sm'
-                      : 'bg-white text-[#252923]/70 border border-[#E8DFD0] hover:bg-[#E8DFD0]/40'
+                      ? 'bg-[#101D45] text-white shadow-sm'
+                      : 'bg-white text-[#57647E] border border-[#E8EAF0] hover:bg-[#F7F8FA]'
                   }`}
                 >
                   {cat.icon}

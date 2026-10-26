@@ -1,90 +1,61 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        // Nature-inspired editorial palette
-        forest: {
-          DEFAULT: '#173D32',
-          hover: '#0F2921',
-          light: '#235043',
-          surface: '#EBF0EB',
-          subtle: '#F2F5F2',
-        },
-        sage: {
-          DEFAULT: '#A8B8A0',
-          dark: '#7D8F74',
-          light: '#E2E9DC',
-          subtle: '#EEF3EA',
-        },
-        ivory: {
-          DEFAULT: '#F7F5EF',
-          light: '#FCFBF8',
-          dark: '#EFECE2',
-        },
-        sand: {
-          DEFAULT: '#E8DFD0',
-          light: '#F4EFE6',
-          dark: '#D5C9B4',
-        },
-        charcoal: {
-          DEFAULT: '#252923',
-          light: '#4A5046',
-          muted: '#7A8276',
-          faint: '#B0B6AC',
-        },
-        terracotta: {
-          DEFAULT: '#C77B5A',
-          hover: '#B56846',
-          light: '#DE997B',
-          subtle: '#F9EFEB',
-        },
-
-        // Legacy tokens mapped seamlessly
         brand: {
-          orange: '#C77B5A',
-          'orange-hover': '#B56846',
-          'orange-subtle': '#F9EFEB',
-          yellow: '#D4A359',
-          cyan: '#589487',
-          blue: '#173D32',
-          navy: '#173D32',
+          orange: "#F45B18",
+          "orange-hover": "#DF4810",
+          "orange-subtle": "#FFF2EB",
+          yellow: "#FFB91F",
+          "yellow-subtle": "#FFF9EB",
+          cyan: "#08C5C9",
+          "cyan-subtle": "#E6FAFB",
+          blue: "#1769F5",
+          "blue-hover": "#0E56D1",
+          "blue-subtle": "#EEF4FE",
+          navy: "#101D45",
+          "navy-light": "#1A2A5E",
+          "navy-muted": "#324068",
         },
         surface: {
-          DEFAULT: '#FFFFFF',
-          secondary: '#F2F0E8',
-          subtle: '#FAF9F4',
+          DEFAULT: "#FFFFFF",
+          secondary: "#F7F8FA",
+          subtle: "#F1F4F9",
         },
         ink: {
-          primary: '#252923',
-          secondary: '#555C50',
-          muted: '#858E7F',
+          primary: "#101D45",
+          secondary: "#57647E",
+          muted: "#8F9BB3",
         },
         line: {
-          DEFAULT: '#E8DFD0',
-          strong: '#D5C9B4',
-          subtle: 'rgba(23, 61, 50, 0.08)',
-        }
+          DEFAULT: "#E8EAF0",
+          strong: "#D7DBE5",
+        },
       },
       fontFamily: {
-        serif: ['Cormorant Garamond', 'Playfair Display', 'Georgia', 'serif'],
-        display: ['Playfair Display', 'Cormorant Garamond', 'Georgia', 'serif'],
-        sans: ['Plus Jakarta Sans', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: [
+          "Plus Jakarta Sans",
+          "Inter",
+          "system-ui",
+          "-apple-system",
+          "sans-serif",
+        ],
       },
       boxShadow: {
-        'soft': '0 2px 8px rgba(37, 41, 35, 0.04), 0 1px 2px rgba(37, 41, 35, 0.02)',
-        'editorial': '0 10px 30px -10px rgba(23, 61, 50, 0.08), 0 4px 10px -2px rgba(23, 61, 50, 0.03)',
-        'lift': '0 20px 40px -15px rgba(23, 61, 50, 0.12)',
+        card: "0 2px 10px rgba(16, 29, 69, 0.04), 0 1px 3px rgba(16, 29, 69, 0.02)",
+        "card-hover":
+          "0 12px 30px -10px rgba(16, 29, 69, 0.12), 0 4px 10px -2px rgba(16, 29, 69, 0.04)",
+        float: "0 20px 40px -15px rgba(16, 29, 69, 0.16)",
+        dropdown:
+          "0 10px 25px -5px rgba(16, 29, 69, 0.1), 0 8px 10px -6px rgba(16, 29, 69, 0.06)",
       },
       borderRadius: {
-        '2xl': '1rem',
-        '3xl': '1.5rem',
-      }
+        "2xl": "1rem",
+        "3xl": "1.5rem",
+      },
     },
   },
   plugins: [],
-}
+};

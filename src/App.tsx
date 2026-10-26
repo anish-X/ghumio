@@ -10,9 +10,7 @@ import { Footer } from './components/common/Footer';
 // Home Views
 import { HeroSearch } from './components/home/HeroSearch';
 import { DestinationGrid } from './components/home/DestinationGrid';
-import { EscapeMoodSection } from './components/home/EscapeMoodSection';
 import { FeaturedTours } from './components/home/FeaturedTours';
-import { TravelStorySection } from './components/home/TravelStorySection';
 import { BusRoutesSection } from './components/home/BusRoutesSection';
 import { FeaturedStays } from './components/home/FeaturedStays';
 import { ActivitiesSection } from './components/home/ActivitiesSection';
@@ -169,15 +167,9 @@ export function App() {
             <DestinationGrid 
               onSelectDestination={(dest) => handleSearch('tours', dest, dest)} 
             />
-            <EscapeMoodSection
-              onSelectEscape={(cat, query) => handleSearch(cat, query, query)}
-            />
             <FeaturedTours 
               onSelectTour={handleSelectTour} 
               onExploreMore={() => handleSearch('tours')} 
-            />
-            <TravelStorySection
-              onExploreJourneys={() => handleSearch('tours')}
             />
             <BusRoutesSection 
               onSelectBus={handleSelectBus} 

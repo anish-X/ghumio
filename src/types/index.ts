@@ -8,9 +8,7 @@ export type DestinationId =
   | "chitwan"
   | "mustang"
   | "bandipur"
-  | "rara"
-  | "ilam"
-  | "mardi";
+  | "rara";
 
 export interface TourItem {
   id: string;
@@ -159,7 +157,6 @@ export interface DestinationCard {
   stayCount: number;
   altitude?: string;
   coordinates?: string;
-  region?: string;
   popularFor: string[];
 }
 

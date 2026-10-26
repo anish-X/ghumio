@@ -4,25 +4,23 @@ export const DESTINATIONS: DestinationCard[] = [
   {
     id: 'pokhara',
     name: 'Pokhara',
-    tagline: 'Quiet waters, mirror reflections & the shadow of Fishtail',
+    tagline: 'Lakes, adventure sports & Annapurna reflections',
     image: '/assets/places/pokhara.svg',
     tourCount: 42,
     stayCount: 88,
     altitude: '822 m',
     coordinates: '28.2096° N, 83.9856° E',
-    region: 'Gandaki',
     popularFor: ['Fewa Lake', 'Paragliding', 'Peace Pagoda', 'Sarangkot Sunrise']
   },
   {
     id: 'mustang',
-    name: 'Mustang',
-    tagline: 'Wind-carved canyons, sacred caves & the walled kingdom of Lo',
+    name: 'Upper Mustang',
+    tagline: 'The ancient walled kingdom of Lo & arid Himalayan canyons',
     image: '/assets/places/mustang.svg',
     tourCount: 14,
     stayCount: 18,
     altitude: '3,840 m',
     coordinates: '29.1824° N, 83.9576° E',
-    region: 'Dhaulagiri',
     popularFor: ['Lo Manthang', 'Sky Caves', 'Tibetan Culture', 'Muktinath']
   },
   {
@@ -34,19 +32,17 @@ export const DESTINATIONS: DestinationCard[] = [
     stayCount: 22,
     altitude: '1,208 m',
     coordinates: '26.9114° N, 87.9272° E',
-    region: 'Koshi',
     popularFor: ['Kanyam Tea Estate', 'Antu Danda Sunrise', 'Mai Pokhari', 'Cardamom Trails']
   },
   {
     id: 'rara',
     name: 'Rara Lake',
-    tagline: 'Untouched waters mirroring alpine pine silence in the far west',
+    tagline: 'The Queen of Himalayan Lakes in untamed Western Nepal',
     image: '/assets/places/rara.svg',
     tourCount: 8,
     stayCount: 10,
     altitude: '2,990 m',
     coordinates: '29.5342° N, 82.0832° E',
-    region: 'Karnali',
     popularFor: ['Pristine Waters', 'Murma Top', 'Pine Forests', 'Remote Solitude']
   },
   {
@@ -58,67 +54,61 @@ export const DESTINATIONS: DestinationCard[] = [
     stayCount: 15,
     altitude: '4,500 m',
     coordinates: '28.4872° N, 83.9189° E',
-    region: 'Annapurna',
     popularFor: ['High Camp', 'Machapuchare Ridge', 'Forest Camps', 'Rhododendron Bloom']
   },
   {
     id: 'bandipur',
     name: 'Bandipur',
-    tagline: 'Preserved 18th-century Newari stone streets & timeless balcony life',
+    tagline: 'Preserved 18th-century Newari hilltop architecture',
     image: '/assets/places/bandipur.svg',
     tourCount: 9,
     stayCount: 19,
     altitude: '1,030 m',
     coordinates: '27.9304° N, 84.4172° E',
-    region: 'Tanahun',
     popularFor: ['Heritage Bazaars', 'Silkhani Peak', 'Siddha Cave', 'Slate Pavements']
   },
   {
     id: 'annapurna',
     name: 'Annapurna Sanctuary',
-    tagline: 'Glacial amphitheatre ringed by ten towering peaks',
+    tagline: 'Iconic glacial amphitheatres & rhododendron trails',
     image: '/assets/places/annapurna.svg',
     tourCount: 35,
     stayCount: 24,
     altitude: '4,130 m',
     coordinates: '28.5962° N, 83.8203° E',
-    region: 'Gandaki',
     popularFor: ['Base Camp Trek', 'Poon Hill', 'Mardi Himal', 'Hot Springs']
   },
   {
     id: 'kathmandu',
     name: 'Kathmandu Valley',
-    tagline: 'Living heritage, medieval squares & artisan courtyard sanctuaries',
+    tagline: 'Living heritage, medieval squares & artisan alleys',
     image: '/assets/places/kathmandu.svg',
     tourCount: 56,
     stayCount: 140,
     altitude: '1,400 m',
     coordinates: '27.7172° N, 85.3240° E',
-    region: 'Bagmati',
     popularFor: ['Boudhanath', 'Patan Durbar', 'Bhaktapur', 'Pashupatinath']
   },
   {
     id: 'everest',
     name: 'Everest & Khumbu',
-    tagline: 'Legendary Sherpa trails, glacial moraines & high passes',
+    tagline: 'Top of the world, Sherpa culture & high mountain passes',
     image: '/assets/places/everest.svg',
     tourCount: 28,
     stayCount: 32,
     altitude: '5,364 m',
     coordinates: '27.9881° N, 86.9250° E',
-    region: 'Solukhumbu',
     popularFor: ['Everest Base Camp', 'Kala Patthar', 'Gokyo Lakes', 'Namche Bazaar']
   },
   {
     id: 'chitwan',
     name: 'Chitwan National Park',
-    tagline: 'Sub-tropical forest canopies, river mist & wildlife sanctuary',
+    tagline: 'One-horned rhinos, Bengal tigers & sub-tropical jungle',
     image: '/assets/places/chitwan.svg',
     tourCount: 19,
     stayCount: 45,
     altitude: '150 m',
     coordinates: '27.5341° N, 84.4525° E',
-    region: 'Narayani',
     popularFor: ['Jeep Safari', 'Bird Watching', 'Canoe Ride', 'Tharu Culture']
   }
 ];
@@ -210,9 +200,9 @@ export const TOURS_DATA: TourItem[] = [
     featured: true,
     badge: 'Nepal Bestseller',
     images: [
-      '/assets/places/mardi.svg',
       '/assets/places/annapurna.svg',
-      '/assets/places/pokhara.svg'
+      '/assets/places/pokhara.svg',
+      '/assets/places/everest.svg'
     ],
     overview: 'Cross the world-renowned Thorong La Pass at 5,416m, journeying through sub-tropical river basins, alpine forests, and the arid trans-Himalayan Tibetan plateau of Mustang.',
     highlights: [
@@ -330,9 +320,9 @@ export const TOURS_DATA: TourItem[] = [
     reviewCount: 76,
     badge: 'Popular Short Trek',
     images: [
-      '/assets/places/mardi.svg',
       '/assets/places/annapurna.svg',
-      '/assets/places/pokhara.svg'
+      '/assets/places/pokhara.svg',
+      '/assets/places/everest.svg'
     ],
     overview: 'The ideal short trek from Pokhara. Walk along dramatic elevated mountain ridges directly facing the sacred Machhapuchhre (Fishtail Peak) and Annapurna South.',
     highlights: [
@@ -411,110 +401,6 @@ export const TOURS_DATA: TourItem[] = [
       verified: true,
       rating: 4.89,
       experienceYears: 18
-    }
-  },
-  {
-    id: 'tour-upper-mustang',
-    title: 'Upper Mustang: Journey to the Walled City of Lo Manthang',
-    destination: 'Mustang',
-    region: 'Dhaulagiri Zone',
-    duration: '10 Days / 9 Nights',
-    durationDays: 10,
-    difficulty: 'Moderate',
-    groupSize: 'Max 8 persons',
-    travelStyle: 'Trans-Himalayan Cultural Discovery & Overland Jeep',
-    priceNPR: 82000,
-    originalPriceNPR: 95000,
-    rating: 4.97,
-    reviewCount: 48,
-    featured: true,
-    badge: 'Restricted Kingdom',
-    images: [
-      '/assets/places/mustang.svg',
-      '/assets/places/bandipur.svg',
-      '/assets/places/pokhara.svg'
-    ],
-    overview: 'Enter the once forbidden Himalayan kingdom of Lo. Cross red sandstone canyons, cliffside sky caves, and 800-year-old painted Gompas on the Tibetan border.',
-    highlights: [
-      'Explore the ancient royal palace and narrow alleys of Lo Manthang',
-      'Discover mysterious sky caves etched into ochre cliffs',
-      'Visit Choedhe and Jampa monasteries with original murals',
-      'Travel through Kali Gandaki gorge, deepest canyon on earth'
-    ],
-    itinerary: [
-      { day: 1, title: 'Pokhara to Jomsom & Kagbeni', desc: 'Scenic flight along Annapurna and Dhaulagiri followed by medieval border post Kagbeni.', altitude: '2,800 m' },
-      { day: 2, title: 'Kagbeni to Chele', desc: 'Cross the Kali Gandaki and ascend through red eroded cliffs to Chele.', altitude: '3,050 m' },
-      { day: 3, title: 'Chele to Syangboche & Ghami', desc: 'Cross high passes with panoramic views of Damodar Himal.', altitude: '3,520 m' },
-      { day: 4, title: 'Ghami to Charang & Lo Manthang', desc: 'Longest mani wall in Mustang and arrival at the white-walled capital.', altitude: '3,840 m' },
-      { day: 5, title: 'Lo Manthang Living Culture & Royal Monasteries', desc: 'Private audience with local elders and exploration of ancient monasteries.', altitude: '3,840 m' }
-    ],
-    included: [
-      'Special Restricted Area Permit ($500 USD equivalent included)',
-      'ACAP permit and licensed Mustang heritage guide',
-      '4WD Land Cruiser overland transport and airport transfers',
-      'Traditional Tibetan lodge accommodation & home-cooked meals'
-    ],
-    excluded: [
-      'Horse rentals in Lo Manthang',
-      'Personal donations at monasteries'
-    ],
-    meetingPoint: 'Jomsom Airport or Pokhara Lakeside Desk',
-    cancellationPolicy: '70% refund up to 14 days before entry date due to permit fees.',
-    provider: {
-      name: 'Lo Heritage Treks & Expeditions',
-      verified: true,
-      rating: 4.97,
-      experienceYears: 19
-    }
-  },
-  {
-    id: 'tour-rara-lake',
-    title: 'Rara Lake & Far-West Karnali Alpine Wilderness Expedition',
-    destination: 'Rara Lake',
-    region: 'Karnali Province',
-    duration: '7 Days / 6 Nights',
-    durationDays: 7,
-    difficulty: 'Moderate',
-    groupSize: 'Min 2, Max 10',
-    travelStyle: 'Pristine Wilderness, Camping & Pine Ridge Trek',
-    priceNPR: 46000,
-    originalPriceNPR: 52000,
-    rating: 4.94,
-    reviewCount: 38,
-    badge: 'Wilderness Sanctuary',
-    images: [
-      '/assets/places/rara.svg',
-      '/assets/places/hero-himalaya.svg',
-      '/assets/places/pokhara.svg'
-    ],
-    overview: 'Discover Nepal’s largest and most tranquil alpine lake at 2,990m, where crystalline azure waters reflect snow-dusted pine forests and starry midnight skies without crowds.',
-    highlights: [
-      'Sunrise hike to Murma Top (3,700m) with 360-degree Karnali panorama',
-      'Wooden boat drifting across the 5km mirror expanse of Rara',
-      'Camp beneath the clearest stargazing skies in the Himalayas',
-      'Encounter rare musk deer, red pandas, and migrant waterfowl'
-    ],
-    itinerary: [
-      { day: 1, title: 'Flight Kathmandu to Nepalgunj & Talcha (Mugu)', desc: 'Dramatic flight over Karnali gorge into mountain airstrip of Talcha.', altitude: '2,735 m' },
-      { day: 2, title: 'Talcha to Rara Lake Rim', desc: 'Gentle trek through blue pine and spruce forests to the serene lake shore.', altitude: '2,990 m' },
-      { day: 3, title: 'Lakeside Quiet Day & Wooden Boating', desc: 'Quiet paddle across pristine waters and bird watching on the northern rim.', altitude: '2,990 m' },
-      { day: 4, title: 'Ascent to Murma Viewpoint', desc: 'Climb through juniper meadows to Murma Top for complete lake vista.', altitude: '3,700 m' },
-      { day: 5, title: 'Talcha Return & Scenic Flight to Kathmandu', desc: 'Farewell to Karnali wilderness and flight return.', altitude: '1,400 m' }
-    ],
-    included: [
-      'Domestic flights Nepalgunj - Talcha - Nepalgunj',
-      'Rara National Park conservation permits and environmental fees',
-      'Experienced wilderness guide and camping crew',
-      'Comfortable eco-tented accommodation with organic meals'
-    ],
-    excluded: ['Warm down sleeping bag rental (optional)', 'Personal trekking gear'],
-    meetingPoint: 'Nepalgunj Airport Terminal / Kathmandu Office',
-    cancellationPolicy: 'Free cancellation up to 7 days before departure.',
-    provider: {
-      name: 'Karnali Wild Journeys',
-      verified: true,
-      rating: 4.95,
-      experienceYears: 14
     }
   }
 ];

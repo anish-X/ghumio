@@ -498,3 +498,4 @@ export const SupplierPortalPage: React.FC<SupplierPortalPageProps> = ({ onNaviga
     </div>
   );
 };
+

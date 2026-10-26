@@ -397,3 +397,4 @@ export const TourDetailPage: React.FC<TourDetailPageProps> = ({ tour, onNavigate
     </div>
   );
 };
+

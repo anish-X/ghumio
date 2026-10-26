@@ -177,3 +177,4 @@ export const ProfilePage: React.FC<ProfilePageProps> = ({ onNavigate }) => {
     </div>
   );
 };
+

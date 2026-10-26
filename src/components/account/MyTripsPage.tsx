@@ -349,3 +349,4 @@ export const MyTripsPage: React.FC<MyTripsPageProps> = ({ bookings, onNavigate, 
     </div>
   );
 };
+

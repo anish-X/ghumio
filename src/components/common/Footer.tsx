@@ -1,5 +1,5 @@
-import React from 'react';
-import { ShieldCheck, MapPin, Phone, Mail, Award, Compass, Heart, ArrowUpRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { ShieldCheck, MapPin, Phone, Mail, Award, Compass, Heart, ArrowUpRight, ArrowRight, Check } from 'lucide-react';
 import { AppView, ServiceCategory } from '../../types';
 
 interface FooterProps {
@@ -7,83 +7,95 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+  const [subscribed, setSubscribed] = useState(false);
+  const [email, setEmail] = useState('');
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      setSubscribed(true);
+      setEmail('');
+    }
+  };
+
   return (
-    <footer className="bg-[#101D45] text-white pt-16 pb-12 border-t border-[#1A2A5E]">
+    <footer className="bg-[#173D32] text-[#F7F5EF] pt-20 pb-12 border-t border-[#173D32]/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Top Feature Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-12 border-b border-[#1A2A5E]">
-          <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-white/5 border border-white/10">
-            <div className="w-10 h-10 rounded-xl bg-[#F45B18]/20 flex items-center justify-center text-[#F45B18] shrink-0">
-              <ShieldCheck className="w-5 h-5" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-sm text-white">100% Verified Local Operators</h4>
-              <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-                Every trekking agency, licensed Sherpa guide, hotel and tourist bus fleet is pre-vetted.
-              </p>
-            </div>
+        {/* Top Newsletter / Inspiration Prompt */}
+        <div className="pb-16 mb-16 border-b border-[#F7F5EF]/15 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-7">
+            <span className="text-[10px] font-mono tracking-[0.25em] uppercase text-[#A8B8A0] block mb-2">
+              The Himalayan Dispatch
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-serif font-light text-[#F7F5EF] tracking-tight">
+              Quiet field notes, seasonal trail reports, and unlisted mountain escapes.
+            </h3>
+            <p className="mt-2 text-xs sm:text-sm font-light text-[#F7F5EF]/70 max-w-lg">
+              Delivered once a month with zero spam. Written directly by local Sherpa naturalists and conservationists.
+            </p>
           </div>
 
-          <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-white/5 border border-white/10">
-            <div className="w-10 h-10 rounded-xl bg-[#08C5C9]/20 flex items-center justify-center text-[#08C5C9] shrink-0">
-              <Award className="w-5 h-5" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-sm text-white">Zero Hidden Fees in NPR</h4>
-              <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-                Direct operator pricing with transparent government taxes and conservation permits included.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-white/5 border border-white/10">
-            <div className="w-10 h-10 rounded-xl bg-[#FFB91F]/20 flex items-center justify-center text-[#FFB91F] shrink-0">
-              <Phone className="w-5 h-5" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-sm text-white">Kathmandu & Pokhara Support</h4>
-              <p className="text-xs text-slate-300 mt-1 leading-relaxed">
-                Real-time assistance via WhatsApp, phone, and airport desks across Nepal's key travel hubs.
-              </p>
-            </div>
+          <div className="lg:col-span-5">
+            {subscribed ? (
+              <div className="flex items-center gap-2.5 p-4 rounded-2xl bg-[#F7F5EF]/10 border border-[#A8B8A0]/40 text-[#A8B8A0] text-xs">
+                <Check className="w-4 h-4 text-[#C77B5A]" />
+                <span>You are subscribed to the Dispatch. Welcome to the sanctuary.</span>
+              </div>
+            ) : (
+              <form onSubmit={handleSubscribe} className="flex gap-2">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Your personal email..."
+                  required
+                  className="flex-1 px-4 py-3 rounded-full bg-[#F7F5EF]/10 border border-[#F7F5EF]/20 text-[#F7F5EF] placeholder-[#F7F5EF]/40 text-xs focus:outline-none focus:border-[#A8B8A0] transition-colors"
+                />
+                <button
+                  type="submit"
+                  className="px-5 py-3 rounded-full bg-[#F7F5EF] text-[#173D32] hover:bg-[#C77B5A] hover:text-white transition-all text-xs font-medium tracking-wide flex items-center gap-1.5 shrink-0 shadow-sm"
+                >
+                  <span>Subscribe</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </form>
+            )}
           </div>
         </div>
 
         {/* Main Footer Links */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 py-12 border-b border-[#1A2A5E]">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-16 border-b border-[#F7F5EF]/15">
           
-          {/* Brand Info */}
-          <div className="md:col-span-2 space-y-4">
+          {/* Brand Manifesto */}
+          <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center overflow-hidden border border-white/20">
-                <img src="/assets/ghumio.jpg" alt="Ghumio" className="w-full h-full object-cover" />
-              </div>
-              <span className="text-2xl font-black tracking-tight text-white">
-                Ghum<span className="text-white">i</span><span className="text-[#F45B18]">o</span>
+              <span className="text-2xl font-serif font-bold tracking-tight text-[#F7F5EF]">
+                Ghumio<span className="text-[#C77B5A] text-xl ml-0.5">•</span>
+              </span>
+              <span className="text-[10px] font-mono tracking-widest uppercase text-[#A8B8A0] px-2 py-0.5 rounded-full border border-[#A8B8A0]/30">
+                Nepal
               </span>
             </div>
-            <p className="text-slate-300 text-sm leading-relaxed max-w-sm">
-              Nepal's dedicated digital travel marketplace. Bridging travelers with authentic Himalayan adventures, lakeside serenity, tourist buses, and mountain boutique stays.
+            <p className="text-xs sm:text-sm font-light text-[#F7F5EF]/75 leading-relaxed max-w-sm">
+              A Nepal-first travel publication and platform. Bringing travelers, local Sherpa teams, eco-lodges, and mountain routes into respectful harmony.
             </p>
-            <div className="flex items-center gap-3 pt-2 text-xs text-slate-400">
-              <div className="flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
-                <MapPin className="w-3.5 h-3.5 text-[#F45B18]" />
-                <span>Thamel Marg, Kathmandu, Nepal</span>
-              </div>
+            <div className="pt-2 text-xs font-mono text-[#A8B8A0] flex items-center gap-2">
+              <MapPin className="w-3.5 h-3.5 text-[#C77B5A]" />
+              <span>Thamel Marg, Kathmandu • Lakeside, Pokhara</span>
             </div>
           </div>
 
-          {/* Column 1: Explore */}
-          <div>
-            <h5 className="text-xs font-bold uppercase tracking-wider text-[#FFB91F] mb-4">
-              Explore Nepal
+          {/* Journeys */}
+          <div className="md:col-span-3">
+            <h5 className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#A8B8A0] mb-4">
+              Curated Paths
             </h5>
-            <ul className="space-y-2.5 text-sm text-slate-300">
+            <ul className="space-y-2.5 text-xs font-light text-[#F7F5EF]/80">
               <li>
                 <button 
                   onClick={() => onNavigate({ type: 'search', category: 'tours', destination: 'Annapurna' })} 
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#C77B5A] transition-colors"
                 >
                   Annapurna Circuit & Sanctuary
                 </button>
@@ -91,110 +103,133 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <li>
                 <button 
                   onClick={() => onNavigate({ type: 'search', category: 'tours', destination: 'Everest' })} 
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#C77B5A] transition-colors"
                 >
-                  Everest Base Camp Treks
+                  Everest Base Camp & Kala Patthar
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => onNavigate({ type: 'search', category: 'tours', destination: 'Mustang' })} 
+                  className="hover:text-[#C77B5A] transition-colors"
+                >
+                  Upper Mustang Walled Lo Manthang
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => onNavigate({ type: 'search', category: 'tours', destination: 'Mardi Himal' })} 
+                  className="hover:text-[#C77B5A] transition-colors"
+                >
+                  Mardi Himal Silent Ridge
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => onNavigate({ type: 'search', category: 'tours', destination: 'Rara Lake' })} 
+                  className="hover:text-[#C77B5A] transition-colors"
+                >
+                  Rara Lake Alpine Wilderness
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Stays & Transits */}
+          <div className="md:col-span-2">
+            <h5 className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#A8B8A0] mb-4">
+              Stays & Transits
+            </h5>
+            <ul className="space-y-2.5 text-xs font-light text-[#F7F5EF]/80">
+              <li>
+                <button 
+                  onClick={() => onNavigate({ type: 'search', category: 'hotels', destination: 'Pokhara' })} 
+                  className="hover:text-[#C77B5A] transition-colors"
+                >
+                  Fewa Lakeside Eco Lodges
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => onNavigate({ type: 'search', category: 'hotels', destination: 'Bandipur' })} 
+                  className="hover:text-[#C77B5A] transition-colors"
+                >
+                  Bandipur Heritage Haveli
                 </button>
               </li>
               <li>
                 <button 
                   onClick={() => onNavigate({ type: 'search', category: 'bus' })} 
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#C77B5A] transition-colors"
                 >
-                  Kathmandu ⇄ Pokhara VIP Sofa Buses
+                  VIP Sofa Seater Tourist Bus
                 </button>
               </li>
               <li>
                 <button 
-                  onClick={() => onNavigate({ type: 'search', category: 'hotels', destination: 'Pokhara' })} 
-                  className="hover:text-white transition-colors"
+                  onClick={() => onNavigate({ type: 'search', category: 'activities' })} 
+                  className="hover:text-[#C77B5A] transition-colors"
                 >
-                  Fewa Lakeside Luxury Resorts
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => onNavigate({ type: 'search', category: 'activities', destination: 'Pokhara' })} 
-                  className="hover:text-white transition-colors"
-                >
-                  Sarangkot Tandem Paragliding
+                  Paragliding & Wilderness Rafting
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Column 2: Portals & Account */}
-          <div>
-            <h5 className="text-xs font-bold uppercase tracking-wider text-[#08C5C9] mb-4">
-              Marketplace Portals
+          {/* Portals */}
+          <div className="md:col-span-2">
+            <h5 className="text-[11px] font-mono uppercase tracking-[0.2em] text-[#A8B8A0] mb-4">
+              Portals
             </h5>
-            <ul className="space-y-2.5 text-sm text-slate-300">
+            <ul className="space-y-2.5 text-xs font-light text-[#F7F5EF]/80">
               <li>
                 <button 
                   onClick={() => onNavigate({ type: 'my-trips' })} 
-                  className="hover:text-white transition-colors"
+                  className="hover:text-[#C77B5A] transition-colors"
                 >
-                  My Booked Trips
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => onNavigate({ type: 'account-profile' })} 
-                  className="hover:text-white transition-colors"
-                >
-                  Traveler Profile & Preferences
+                  Guest Trip Itinerary
                 </button>
               </li>
               <li>
                 <button 
                   onClick={() => onNavigate({ type: 'supplier-portal' })} 
-                  className="hover:text-[#F45B18] transition-colors flex items-center gap-1 font-medium"
+                  className="hover:text-[#C77B5A] transition-colors"
                 >
-                  <span>Supplier Business Portal</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  Supplier Portal
                 </button>
               </li>
               <li>
                 <button 
                   onClick={() => onNavigate({ type: 'admin-dashboard' })} 
-                  className="hover:text-[#08C5C9] transition-colors flex items-center gap-1 font-medium"
+                  className="hover:text-[#C77B5A] transition-colors"
                 >
-                  <span>Ghumio Admin Console</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  Platform Admin
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => onNavigate({ type: 'account-profile' })} 
+                  className="hover:text-[#C77B5A] transition-colors"
+                >
+                  Traveler Profile
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Trust & Payments */}
-          <div>
-            <h5 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">
-              Accepted Mock Payments
-            </h5>
-            <div className="space-y-3">
-              <div className="flex flex-wrap gap-2 text-xs font-semibold">
-                <span className="px-2.5 py-1 rounded bg-[#E6FAFB] text-[#08C5C9] border border-[#08C5C9]/30">Fonepay QR</span>
-                <span className="px-2.5 py-1 rounded bg-[#E8F8EE] text-[#15803D] border border-[#15803D]/30">eSewa</span>
-                <span className="px-2.5 py-1 rounded bg-[#F4EEFB] text-[#7E22CE] border border-[#7E22CE]/30">Khalti</span>
-                <span className="px-2.5 py-1 rounded bg-slate-800 text-slate-200 border border-slate-700">Visa / MC</span>
-              </div>
-              <p className="text-xs text-slate-400 leading-relaxed pt-2">
-                All pricing displayed in Nepalese Rupees (NPR). Instant confirmation with local merchant voucher.
-              </p>
-            </div>
-          </div>
-
         </div>
 
-        {/* Bottom Bar & Prototype Notice */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400 gap-4">
-          <div className="flex items-center gap-2">
-            <span>© {new Date().getFullYear()} Ghumio Technologies Nepal. All rights reserved.</span>
+        {/* Bottom Credits & Prototype Notice */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#A8B8A0] font-light gap-4">
+          <div className="flex items-center gap-4">
+            <span>© 2026 Ghumio Technologies Nepal. All rights reserved.</span>
+            <span>•</span>
+            <span className="text-[#C77B5A]">Editorial UI/UX Prototype</span>
           </div>
 
-          <div className="flex items-center gap-2 bg-[#1A2A5E] px-3.5 py-1.5 rounded-full text-[11px] text-[#FFB91F]">
-            <span className="w-2 h-2 rounded-full bg-[#FFB91F]"></span>
-            <span>Frontend UI Prototype Demonstration • Simulated Transactions Only</span>
+          <div className="flex items-center gap-6 font-mono text-[10px]">
+            <span>LOCAL CURRENCY: NPR (रू)</span>
+            <span>RESPONSIBLE TREKKING STANDARD</span>
           </div>
         </div>
 

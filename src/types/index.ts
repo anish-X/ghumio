@@ -1,6 +1,16 @@
-export type ServiceCategory = 'tours' | 'hotels' | 'bus' | 'activities';
+export type ServiceCategory = "tours" | "hotels" | "bus" | "activities";
 
-export type DestinationId = 'pokhara' | 'kathmandu' | 'annapurna' | 'everest' | 'chitwan' | 'mustang' | 'bandipur' | 'rara';
+export type DestinationId =
+  | "pokhara"
+  | "kathmandu"
+  | "annapurna"
+  | "everest"
+  | "chitwan"
+  | "mustang"
+  | "bandipur"
+  | "rara"
+  | "ilam"
+  | "mardi";
 
 export interface TourItem {
   id: string;
@@ -9,7 +19,7 @@ export interface TourItem {
   region: string;
   duration: string;
   durationDays: number;
-  difficulty: 'Easy' | 'Moderate' | 'Challenging' | 'Strenuous';
+  difficulty: "Easy" | "Moderate" | "Challenging" | "Strenuous";
   groupSize: string;
   travelStyle: string;
   priceNPR: number;
@@ -53,7 +63,12 @@ export interface HotelItem {
   destination: string;
   location: string;
   address: string;
-  propertyType: 'Resort' | 'Boutique Hotel' | 'Eco Lodge' | 'Heritage Stay' | 'Guesthouse';
+  propertyType:
+    | "Resort"
+    | "Boutique Hotel"
+    | "Eco Lodge"
+    | "Heritage Stay"
+    | "Guesthouse";
   starRating: number;
   rating: number;
   reviewCount: number;
@@ -72,7 +87,7 @@ export interface BusSeat {
   seatNumber: string;
   row: number;
   col: number; // 0, 1 = left side, 2 = aisle, 3, 4 = right side
-  type: 'standard' | 'business' | 'sleeper';
+  type: "standard" | "business" | "sleeper";
   isBooked: boolean;
   priceNPR: number;
 }
@@ -81,7 +96,11 @@ export interface BusItem {
   id: string;
   operator: string;
   busNumber: string;
-  busType: 'Super Deluxe AC' | 'VIP Sofa Seater' | 'Tourist Express AC' | 'Sleeper Deluxe';
+  busType:
+    | "Super Deluxe AC"
+    | "VIP Sofa Seater"
+    | "Tourist Express AC"
+    | "Sleeper Deluxe";
   from: string;
   to: string;
   departureStation: string;
@@ -104,7 +123,13 @@ export interface ActivityItem {
   title: string;
   destination: string;
   location: string;
-  category: 'Paragliding' | 'White Water Rafting' | 'Bungee & Canyon' | 'Jungle Safari' | 'Heritage & Culture' | 'Helicopter Tour';
+  category:
+    | "Paragliding"
+    | "White Water Rafting"
+    | "Bungee & Canyon"
+    | "Jungle Safari"
+    | "Heritage & Culture"
+    | "Helicopter Tour";
   duration: string;
   durationHours: number;
   priceNPR: number;
@@ -133,7 +158,21 @@ export interface DestinationCard {
   tourCount: number;
   stayCount: number;
   altitude?: string;
+  coordinates?: string;
+  region?: string;
   popularFor: string[];
+}
+
+export interface MoodEscape {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  query: string;
+  category: ServiceCategory;
+  iconName: string;
+  tags: string[];
+  destinations: string[];
 }
 
 export interface BookingRecord {
@@ -162,23 +201,33 @@ export interface BookingRecord {
     discountNPR: number;
     totalAmountNPR: number;
   };
-  paymentMethod: 'fonepay' | 'esewa' | 'khalti' | 'card' | 'pay_at_desk';
-  paymentStatus: 'paid' | 'pending';
-  status: 'confirmed' | 'pending' | 'cancelled' | 'completed';
-  confirmationType: 'instant' | 'supplier_review';
+  paymentMethod: "fonepay" | "esewa" | "khalti" | "card" | "pay_at_desk";
+  paymentStatus: "paid" | "pending";
+  status: "confirmed" | "pending" | "cancelled" | "completed";
+  confirmationType: "instant" | "supplier_review";
   createdAt: string;
 }
 
-export type AppView = 
-  | { type: 'home' }
-  | { type: 'search'; category: ServiceCategory; query?: string; destination?: string }
-  | { type: 'tour-detail'; id: string }
-  | { type: 'hotel-detail'; id: string }
-  | { type: 'bus-detail'; id: string }
-  | { type: 'activity-detail'; id: string }
-  | { type: 'checkout'; itemType: ServiceCategory; itemId: string; prefillData?: any }
-  | { type: 'booking-success'; bookingId: string }
-  | { type: 'my-trips' }
-  | { type: 'account-profile' }
-  | { type: 'supplier-portal'; tab?: string }
-  | { type: 'admin-dashboard'; tab?: string };
+export type AppView =
+  | { type: "home" }
+  | {
+      type: "search";
+      category: ServiceCategory;
+      query?: string;
+      destination?: string;
+    }
+  | { type: "tour-detail"; id: string }
+  | { type: "hotel-detail"; id: string }
+  | { type: "bus-detail"; id: string }
+  | { type: "activity-detail"; id: string }
+  | {
+      type: "checkout";
+      itemType: ServiceCategory;
+      itemId: string;
+      prefillData?: any;
+    }
+  | { type: "booking-success"; bookingId: string }
+  | { type: "my-trips" }
+  | { type: "account-profile" }
+  | { type: "supplier-portal"; tab?: string }
+  | { type: "admin-dashboard"; tab?: string };

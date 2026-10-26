@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+    <defs>
+      <linearGradient id="raraSky" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#142C25"/>
+        <stop offset="60%" stop-color="#2D5A4C"/>
+        <stop offset="100%" stop-color="#E8DFD0"/>
+      </linearGradient>
+      <linearGradient id="raraDeepWater" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#1F4E43"/>
+        <stop offset="40%" stop-color="#173D32"/>
+        <stop offset="100%" stop-color="#0B201A"/>
+      </linearGradient>
+    </defs>
+    <rect width="800" height="600" fill="url(#raraSky)"/>
+    <!-- Distant snowy peaks of Chuchemara Danda -->
+    <polygon points="280,140 410,260 150,260" fill="#F7F5EF" opacity="0.85"/>
+    <polygon points="520,130 660,260 380,260" fill="#F7F5EF" opacity="0.85"/>
+    <!-- Dark pine forests around the pristine lake basin -->
+    <path d="M0,250 Q200,225 400,245 T800,230 L800,330 L0,330 Z" fill="#162D24"/>
+    <!-- Pine tree tooth lines -->
+    <polygon points="120,210 135,260 105,260" fill="#0E211A"/>
+    <polygon points="180,200 195,260 165,260" fill="#0E211A"/>
+    <polygon points="620,195 635,260 605,260" fill="#0E211A"/>
+    <polygon points="680,205 695,260 665,260" fill="#0E211A"/>
+    <!-- Crystalline Rara Waters -->
+    <rect y="310" width="800" height="290" fill="url(#raraDeepWater)"/>
+    <!-- Mirror reflections of snow and pines -->
+    <ellipse cx="400" cy="350" rx="200" ry="8" fill="#A8B8A0" opacity="0.3"/>
+    <ellipse cx="480" cy="410" rx="240" ry="6" fill="#E8DFD0" opacity="0.2"/>
+    <ellipse cx="320" cy="480" rx="180" ry="5" fill="#E8DFD0" opacity="0.15"/>
+  </svg>

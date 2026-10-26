@@ -10,30 +10,31 @@ interface BusRoutesSectionProps {
 
 export const BusRoutesSection: React.FC<BusRoutesSectionProps> = ({ onSelectBus, onExploreMore }) => {
   return (
-    <section className="py-14 sm:py-20 bg-white border-b border-[#E8EAF0]">
+    <section className="py-20 sm:py-28 bg-[#F7F5EF] text-[#252923] border-b border-[#E8DFD0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
-          <div>
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FFB91F] mb-2">
-              <span className="w-2 h-2 rounded-full bg-[#FFB91F]"></span>
-              Tourist Highway Coaches
+        {/* Editorial Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 border-b border-[#E8DFD0] pb-8">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 text-xs font-light tracking-[0.25em] uppercase text-[#7D8876] mb-3">
+              <Bus className="w-3.5 h-3.5 text-[#C77B5A]" />
+              <span>Transits • Scenic Highway Co-ops</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#101D45] tracking-tight">
-              Popular Intercity Tourist Bus Routes
+            <h2 className="text-3xl sm:text-5xl font-serif font-light text-[#173D32] tracking-tight leading-[1.15]">
+              Scenic tourist transit <br className="hidden sm:inline" />
+              <span className="italic font-normal text-[#C77B5A]">with panoramic glass.</span>
             </h2>
-            <p className="mt-2 text-sm sm:text-base text-[#57647E]">
-              Guaranteed 2x1 VIP Sofa seating, air-suspension comfort, snack boxes & clean highway stops.
+            <p className="mt-4 text-sm sm:text-base font-light text-[#7D8876] leading-relaxed">
+              Travel along river gorges in comfort with guaranteed 2x1 VIP sofa seats, air suspension, sanitized rest stops, and live seat selection.
             </p>
           </div>
 
           <button
             onClick={onExploreMore}
-            className="mt-4 sm:mt-0 inline-flex items-center gap-2 text-sm font-bold text-[#1769F5] hover:text-[#0E56D1] group"
+            className="mt-6 md:mt-0 inline-flex items-center gap-2 text-xs font-medium tracking-wide text-[#173D32] hover:text-[#C77B5A] transition-colors py-2 group"
           >
-            <span>View all tourist routes</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <span>View all routes</span>
+            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
 
@@ -44,88 +45,76 @@ export const BusRoutesSection: React.FC<BusRoutesSectionProps> = ({ onSelectBus,
               <div
                 key={bus.id}
                 onClick={() => onSelectBus(bus.id)}
-                className="group bg-[#FFFCF7] hover:bg-white rounded-3xl p-5 sm:p-6 border border-[#E8EAF0] hover:border-[#1769F5]/40 shadow-sm hover:shadow-card transition-all duration-200 cursor-pointer"
+                className="group bg-[#F7F5EF] hover:bg-white rounded-3xl p-6 sm:p-7 border border-[#E8DFD0] hover:border-[#173D32]/30 shadow-2xs hover:shadow-md transition-all duration-300 cursor-pointer"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
                   
                   {/* Left: Operator & Badge */}
                   <div className="lg:col-span-4">
-                    <div className="flex items-center gap-2">
-                      <span className="px-2.5 py-0.5 rounded-full bg-[#EEF4FE] text-[#1769F5] font-bold text-xs">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="px-3 py-1 rounded-full bg-[#173D32]/10 text-[#173D32] text-[10px] font-mono uppercase tracking-wider">
                         {bus.busType}
                       </span>
                       {bus.featured && (
-                        <span className="px-2.5 py-0.5 rounded-full bg-[#FFF9EB] text-[#B7791F] font-bold text-xs flex items-center gap-1">
+                        <span className="px-2.5 py-0.5 rounded-full bg-[#C77B5A]/15 text-[#C77B5A] text-[10px] font-medium flex items-center gap-1">
                           <Sparkles className="w-3 h-3" />
-                          Top Rated
+                          Top Highway Fleet
                         </span>
                       )}
                     </div>
-
-                    <h3 className="text-lg font-bold text-[#101D45] mt-2 group-hover:text-[#1769F5] transition-colors">
+                    <h3 className="text-xl font-serif font-light text-[#173D32] group-hover:text-[#C77B5A] transition-colors">
                       {bus.operator}
                     </h3>
-                    
-                    <div className="text-xs text-[#8F9BB3] mt-0.5 font-medium">
-                      Coach Reg: {bus.busNumber} • {bus.availableSeats} of {bus.totalSeats} seats open
-                    </div>
-
-                    {/* Amenities list */}
-                    <div className="flex flex-wrap gap-1.5 mt-3">
-                      {bus.amenities.slice(0, 3).map((amenity, i) => (
-                        <span key={i} className="text-[11px] font-medium text-[#57647E] bg-white border border-[#E8EAF0] px-2 py-0.5 rounded-md">
-                          {amenity}
-                        </span>
-                      ))}
+                    <div className="flex items-center gap-2 text-xs text-[#7D8876] mt-1 font-mono">
+                      <span>Coach #{bus.busNumber}</span>
+                      <span>•</span>
+                      <span>{bus.seats.filter(s => !s.isBooked).length} seats open</span>
                     </div>
                   </div>
 
-                  {/* Middle: Timing & Route */}
-                  <div className="lg:col-span-5 border-y lg:border-y-0 lg:border-x border-[#E8EAF0] py-4 lg:py-0 lg:px-6">
-                    <div className="flex items-center justify-between">
-                      {/* Departure */}
-                      <div>
-                        <div className="text-xl font-black text-[#101D45]">{bus.departureTime}</div>
-                        <div className="text-xs font-semibold text-[#57647E]">{bus.from}</div>
-                        <div className="text-[11px] text-[#8F9BB3] line-clamp-1">{bus.departureStation}</div>
+                  {/* Middle: Departure & Route Timeline */}
+                  <div className="lg:col-span-5">
+                    <div className="flex items-center justify-between max-w-sm">
+                      <div className="text-left">
+                        <div className="text-xl font-serif font-medium text-[#173D32]">{bus.departureTime}</div>
+                        <div className="text-xs text-[#7D8876] font-mono mt-0.5">{bus.from}</div>
+                        <div className="text-[10px] text-[#7D8876]/70 truncate max-w-[120px]">{bus.departureStation}</div>
                       </div>
 
-                      {/* Line & Duration */}
                       <div className="flex flex-col items-center px-4">
-                        <span className="text-[11px] font-bold text-[#8F9BB3] mb-1">{bus.duration}</span>
-                        <div className="w-24 sm:w-32 h-[2px] bg-[#E8EAF0] relative flex items-center justify-between">
-                          <span className="w-2 h-2 rounded-full bg-[#101D45]"></span>
-                          <Bus className="w-3.5 h-3.5 text-[#F45B18]" />
-                          <span className="w-2 h-2 rounded-full bg-[#F45B18]"></span>
+                        <span className="text-[10px] font-mono text-[#7D8876]">{bus.duration}</span>
+                        <div className="relative w-28 h-0.5 bg-[#E8DFD0] my-2">
+                          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#C77B5A]"></div>
                         </div>
-                        <span className="text-[10px] text-[#8F9BB3] mt-1">Direct Highway AC</span>
+                        <span className="text-[10px] text-[#173D32] flex items-center gap-1">
+                          <Wifi className="w-3 h-3" />
+                          <span>Wi-Fi AC</span>
+                        </span>
                       </div>
 
-                      {/* Arrival */}
                       <div className="text-right">
-                        <div className="text-xl font-black text-[#101D45]">{bus.arrivalTime}</div>
-                        <div className="text-xs font-semibold text-[#57647E]">{bus.to}</div>
-                        <div className="text-[11px] text-[#8F9BB3] line-clamp-1">{bus.arrivalStation}</div>
+                        <div className="text-xl font-serif font-medium text-[#173D32]">{bus.arrivalTime}</div>
+                        <div className="text-xs text-[#7D8876] font-mono mt-0.5">{bus.to}</div>
+                        <div className="text-[10px] text-[#7D8876]/70 truncate max-w-[120px]">{bus.arrivalStation}</div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Right: Price & CTA */}
-                  <div className="lg:col-span-3 flex lg:flex-col items-center lg:items-end justify-between gap-3">
+                  {/* Right: Price & Seat Action */}
+                  <div className="lg:col-span-3 flex lg:flex-col items-center lg:items-end justify-between pt-4 lg:pt-0 border-t lg:border-t-0 border-[#E8DFD0]/80">
                     <div className="text-left lg:text-right">
-                      <div className="text-[11px] text-[#8F9BB3]">Per seat fare</div>
-                      <div className="text-xl sm:text-2xl font-black text-[#101D45]">
+                      <div className="text-[10px] uppercase font-mono tracking-wider text-[#7D8876]">Fixed NPR Fare</div>
+                      <div className="text-2xl font-serif font-medium text-[#173D32]">
                         {formatNPR(bus.priceNPR)}
                       </div>
-                      <div className="text-[11px] text-[#15803D] font-semibold">Zero booking fee</div>
                     </div>
 
                     <button
                       type="button"
-                      className="px-5 py-2.5 rounded-2xl bg-[#F45B18] hover:bg-[#DF4810] text-white font-bold text-xs sm:text-sm flex items-center gap-1.5 shadow-sm transition-all"
+                      className="mt-2 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#173D32] group-hover:bg-[#C77B5A] text-[#F7F5EF] text-xs font-medium tracking-wide transition-all shadow-2xs"
                     >
-                      <Armchair className="w-4 h-4" />
-                      <span>Select Seats</span>
+                      <Armchair className="w-3.5 h-3.5" />
+                      <span>Select seat</span>
                     </button>
                   </div>
 

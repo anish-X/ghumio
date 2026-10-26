@@ -340,3 +340,4 @@ export const BusDetailPage: React.FC<BusDetailPageProps> = ({ bus, onNavigate, o
     </div>
   );
 };
+

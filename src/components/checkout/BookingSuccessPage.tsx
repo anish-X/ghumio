@@ -163,3 +163,4 @@ export const BookingSuccessPage: React.FC<BookingSuccessPageProps> = ({ booking,
     </div>
   );
 };
+

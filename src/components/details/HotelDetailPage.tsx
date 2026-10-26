@@ -303,3 +303,4 @@ export const HotelDetailPage: React.FC<HotelDetailPageProps> = ({ hotel, onNavig
     </div>
   );
 };
+

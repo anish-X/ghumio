@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+    <defs>
+      <linearGradient id="ilamSky" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#1B352B"/>
+        <stop offset="60%" stop-color="#4B6E5D"/>
+        <stop offset="100%" stop-color="#E8DFD0"/>
+      </linearGradient>
+      <linearGradient id="teaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#2D543F"/>
+        <stop offset="100%" stop-color="#173D32"/>
+      </linearGradient>
+    </defs>
+    <rect width="800" height="600" fill="url(#ilamSky)"/>
+    <!-- Distant Kanchenjunga snow peak -->
+    <polygon points="560,90 680,240 440,240" fill="#FFFFFF" opacity="0.9"/>
+    <!-- Rolling Emerald Tea Garden Terraces -->
+    <path d="M0,230 Q220,180 440,220 T800,200 L800,600 L0,600 Z" fill="#3E6B52"/>
+    <path d="M0,280 Q260,230 520,270 T800,250 L800,600 L0,600 Z" fill="#315B45"/>
+    <path d="M0,340 Q300,290 600,330 T800,310 L800,600 L0,600 Z" fill="url(#teaGradient)"/>
+    <path d="M0,420 Q240,370 500,410 T800,390 L800,600 L0,600 Z" fill="#133329"/>
+    <!-- Organic tea bush curves -->
+    <path d="M40,360 Q180,330 320,355 T600,345" stroke="#467B5E" stroke-width="4" fill="none"/>
+    <path d="M10,440 Q220,400 440,430 T780,415" stroke="#3D6B52" stroke-width="5" fill="none"/>
+    <!-- Heritage wooden tea planter estate bungalow -->
+    <polygon points="580,310 660,275 740,310" fill="#C77B5A"/>
+    <rect x="590" y="310" width="140" height="60" fill="#F7F5EF"/>
+    <rect x="620" y="325" width="20" height="30" fill="#173D32"/>
+    <rect x="670" y="325" width="20" height="30" fill="#173D32"/>
+  </svg>

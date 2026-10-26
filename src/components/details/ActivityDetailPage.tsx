@@ -301,3 +301,4 @@ export const ActivityDetailPage: React.FC<ActivityDetailPageProps> = ({ activity
     </div>
   );
 };
+

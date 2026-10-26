@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%">
+    <defs>
+      <linearGradient id="himalayaDawnSky" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#0F241F"/>
+        <stop offset="35%" stop-color="#1B3A31"/>
+        <stop offset="65%" stop-color="#466557"/>
+        <stop offset="85%" stop-color="#C77B5A"/>
+        <stop offset="100%" stop-color="#E8DFD0"/>
+      </linearGradient>
+      <linearGradient id="peakGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FFF8E8"/>
+        <stop offset="50%" stop-color="#F7F5EF"/>
+        <stop offset="100%" stop-color="#D5C9B4"/>
+      </linearGradient>
+      <linearGradient id="mountainShade" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#2D3A32"/>
+        <stop offset="100%" stop-color="#173D32"/>
+      </linearGradient>
+      <radialGradient id="morningMote" cx="70%" cy="30%" r="40%">
+        <stop offset="0%" stop-color="#FFE8D6" stop-opacity="0.45"/>
+        <stop offset="100%" stop-color="#173D32" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <!-- Deep atmospheric sky -->
+    <rect width="1600" height="900" fill="url(#himalayaDawnSky)"/>
+    <rect width="1600" height="900" fill="url(#morningMote)"/>
+    
+    <!-- Distant High Peaks (Annapurna & Machhapuchhre) glowing with first dawn light -->
+    <polygon points="820,160 1020,440 620,440" fill="url(#peakGlow)"/>
+    <polygon points="820,160 870,440 820,440" fill="#E8DFD0" opacity="0.8"/>
+    <polygon points="560,220 740,460 380,460" fill="url(#peakGlow)" opacity="0.9"/>
+    <polygon points="1120,240 1340,480 900,480" fill="url(#peakGlow)" opacity="0.85"/>
+    <polygon points="340,290 520,510 160,510" fill="#E8DFD0" opacity="0.75"/>
+    
+    <!-- Layered Himalayan Ridges in Muted Sage and Deep Forest Green -->
+    <!-- Ridge Layer 1 (Mid-distance) -->
+    <path d="M0,450 Q380,360 800,430 T1600,390 L1600,600 L0,600 Z" fill="#3D5347" opacity="0.85"/>
+    <!-- Ridge Layer 2 with Pine Silhouettes -->
+    <path d="M0,520 Q480,440 980,510 T1600,470 L1600,720 L0,720 Z" fill="#2A4237"/>
+    <!-- Ridge Layer 3 (Foreground Valley) -->
+    <path d="M0,620 Q320,560 760,630 T1600,590 L1600,900 L0,900 Z" fill="url(#mountainShade)"/>
+    
+    <!-- Quiet mountain stone chorten & prayer flag line in foreground -->
+    <path d="M120,720 L160,720 L170,750 L110,750 Z" fill="#E8DFD0"/>
+    <rect x="125" y="695" width="30" height="25" fill="#F7F5EF"/>
+    <polygon points="120,695 140,665 160,695" fill="#D5C9B4"/>
+    <line x1="140" y1="665" x2="140" y2="650" stroke="#C77B5A" stroke-width="2"/>
+    <path d="M140,655 Q240,670 360,660" stroke="#F7F5EF" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <polygon points="180,662 195,662 188,675" fill="#C77B5A"/>
+    <polygon points="215,664 230,664 223,677" fill="#E8DFD0"/>
+    <polygon points="250,665 265,665 258,678" fill="#173D32"/>
+    <polygon points="285,664 300,664 293,677" fill="#A8B8A0"/>
+    <polygon points="320,662 335,662 328,675" fill="#C77B5A"/>
+  </svg>

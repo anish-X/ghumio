@@ -124,3 +124,4 @@ export const EscapeMoodSection: React.FC<EscapeMoodSectionProps> = ({ onSelectEs
     </section>
   );
 };
+

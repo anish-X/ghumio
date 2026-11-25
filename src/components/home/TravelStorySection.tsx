@@ -99,3 +99,4 @@ export const TravelStorySection: React.FC<TravelStorySectionProps> = ({ onExplor
     </section>
   );
 };
+
